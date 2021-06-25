@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Tiket Mobile IOS Automation</td>
+            <td>28 Nov 2019, 15:22</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">ChoosePayment.alfamart()</td>
+              <td>1</td>
+              <td class="duration" data-value="101133937292">1m 41s 133ms</td>
+              <td class="duration" data-value="101133937292">1m 41s 133ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ChoosePayment.indomaret()</td>
+              <td>1</td>
+              <td class="duration" data-value="63327043848">1m 3s 327ms</td>
+              <td class="duration" data-value="63327043848">1m 3s 327ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ChoosePayment.virtualAccountBCA()</td>
+              <td>1</td>
+              <td class="duration" data-value="30461557689">30s 461ms</td>
+              <td class="duration" data-value="30461557689">30s 461ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ChoosePayment.virtualAccountBNI()</td>
+              <td>1</td>
+              <td class="duration" data-value="30717955292">30s 717ms</td>
+              <td class="duration" data-value="30717955292">30s 717ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ChoosePayment.virtualAccountBRIVA()</td>
+              <td>1</td>
+              <td class="duration" data-value="26298862015">26s 298ms</td>
+              <td class="duration" data-value="26298862015">26s 298ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">ChoosePayment.virtualAccountMandiri()</td>
+              <td>1</td>
+              <td class="duration" data-value="25587395160">25s 587ms</td>
+              <td class="duration" data-value="25587395160">25s 587ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">InstructionPayment.InstructionPaymentMinimarket()</td>
+              <td>2</td>
+              <td class="duration" data-value="25134745581">25s 134ms</td>
+              <td class="duration" data-value="12567372790">12s 567ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">InstructionPayment.InstructionPaymentVirtualAccount()</td>
+              <td>4</td>
+              <td class="duration" data-value="87964971397">1m 27s 964ms</td>
+              <td class="duration" data-value="21991242849">21s 991ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">MainHomePage.homepageTrain()</td>
+              <td>6</td>
+              <td class="duration" data-value="20695142350">20s 695ms</td>
+              <td class="duration" data-value="3449190391">3s 449ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TrainBookingForm.confirmDataTrain()</td>
+              <td>6</td>
+              <td class="duration" data-value="250603683958">4m 10s 603ms</td>
+              <td class="duration" data-value="41767280659">41s 767ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TrainBookingForm.fillGuestData(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="21378192101">21s 378ms</td>
+              <td class="duration" data-value="3563032016">3s 563ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TrainBookingForm.fillPassengerTrain()</td>
+              <td>6</td>
+              <td class="duration" data-value="152211988495">2m 32s 211ms</td>
+              <td class="duration" data-value="25368664749">25s 368ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TrainBookingForm.useInsuranceTrain(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="632031">000ms</td>
+              <td class="duration" data-value="105338">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TrainHomepage.iWantToGoFromTo(String,String)</td>
+              <td>6</td>
+              <td class="duration" data-value="347698263465">5m 47s 698ms</td>
+              <td class="duration" data-value="57949710577">57s 949ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TrainHomepage.roundTripTrain()</td>
+              <td>2</td>
+              <td class="duration" data-value="13762529832">13s 762ms</td>
+              <td class="duration" data-value="6881264916">6s 881ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TrainHomepage.searchTrain()</td>
+              <td>6</td>
+              <td class="duration" data-value="51719677716">51s 719ms</td>
+              <td class="duration" data-value="8619946286">8s 619ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TrainHomepage.singleTripTrain()</td>
+              <td>4</td>
+              <td class="duration" data-value="19352215315">19s 352ms</td>
+              <td class="duration" data-value="4838053828">4s 838ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TrainSearchResult.chooseFlightRoundfTrip()</td>
+              <td>2</td>
+              <td class="duration" data-value="58484962623">58s 484ms</td>
+              <td class="duration" data-value="29242481311">29s 242ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TrainSearchResult.chooseFlightSingleTrip()</td>
+              <td>4</td>
+              <td class="duration" data-value="61520674463">1m 1s 520ms</td>
+              <td class="duration" data-value="15380168615">15s 380ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">User.guestUser()</td>
+              <td>6</td>
+              <td class="duration" data-value="38002385340">38s 002ms</td>
+              <td class="duration" data-value="6333730890">6s 333ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>20</td>
+            <td>72</td>
+            <td class="duration">23m 46s 056ms</td>
+            <td class="duration">19s 806ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

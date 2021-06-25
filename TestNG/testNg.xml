@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" verbose="1" parallel="tests" thread-count="2">
+<!--    <test name="iPhone4_11.2.1">-->
+<!--        <parameter name="port" value="4723"/>-->
+<!--         <parameter name="udid" value="234e3100cb5e446737f5fc2cb3c4afa230cd0928"/>-->
+<!--        <classes>-->
+<!--           </classes>-->
+<!--    </test>-->
+
+    <test name="iPhone1_11 0 3">
+        <parameter name="port" value="4723"/>
+        <parameter name="udid" value="bbbf4d65e706810676d3431b5d60cdd2e95cfb35"/>
+        <classes>
+<!--            <class name="BaseClass.TestRunnerBackup"/>-->
+
+        </classes>
+    </test>
+</suite>
